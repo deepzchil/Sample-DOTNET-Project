@@ -3,8 +3,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore "StudentManagement/StudentManagement.csproj"
-RUN dotnet publish "StudentManagement/StudentManagement.csproj" -c Release -o /app/publish
+RUN dotnet restore "StudentManagement.csproj"
+RUN dotnet publish "StudentManagement.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
